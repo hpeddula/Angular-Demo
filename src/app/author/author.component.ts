@@ -10,12 +10,24 @@ import { Post, Query } from './types';
 })
 
 export class AuthorComponent implements OnInit{
-    posts :Observable<Post[]>;
+    posts :Post[];
     constructor(private apollo:Apollo){}
     ngOnInit(){
-    // var res=this.apollo.watchQuery<any>({
-    //     query:
+    var res=this.apollo.watchQuery<Query>({
+        query:gql`
+        query posts{
+            posts{
+                id
+                title
+               author{
+                   id
+                   firstName
+                   lastName
+               }
+            }
+        }
+        `,
 
-    // })
+    }).valueChanges.subscribe(({data})=>this.posts=data.posts)
 }
 }

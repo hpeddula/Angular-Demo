@@ -3,8 +3,8 @@ import { Observable } from 'rxjs/Observable';
 @Component({
   selector: 'app-root',
   template: `
-  <registration></registration><br>
-  <report></report>
+
+  <author></author>
 `,
   // styleUrls: ['./app.component.css']
 })
