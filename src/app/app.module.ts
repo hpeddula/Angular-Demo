@@ -20,7 +20,7 @@ import { AuthormComponent } from './author/authorm.component';
 const appRoutes : Routes=[
   {path:'employee',component:EmployeeComponent,data: { title: 'Employees   List' }},
   {path:'home',component:HomeComponent},
-  { path: '',redirectTo: '/employee',pathMatch: 'full'},
+  { path: '',component:AuthorComponent ,pathMatch: 'full'},
   {path:'**',component:PageNotFoundComponent}
 ];
 @NgModule({
@@ -30,7 +30,8 @@ const appRoutes : Routes=[
   ],
   imports: [
     BrowserModule,
-    FormsModule,RouterModule.forRoot(appRoutes,{ enableTracing: true } ),
+    FormsModule,
+   RouterModule.forRoot(appRoutes,{ enableTracing: true } ),
     HttpClientModule, 
     ApolloModule,
     HttpLinkModule
