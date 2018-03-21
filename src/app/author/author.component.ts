@@ -19,6 +19,7 @@ export class AuthorComponent implements OnInit{
             posts{
                 id
                 title
+                votes
                author{
                    id
                    firstName

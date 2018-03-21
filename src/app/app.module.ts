@@ -16,6 +16,7 @@ import { PageNotFoundComponent } from './other/pnf.component';
 import { RegistrationComponent } from './registration/registration.component'; 
 import { ReportComponent } from './registration/report.component';
 import { AuthorComponent } from './author/author.component';
+import { AuthormComponent } from './author/authorm.component';
 const appRoutes : Routes=[
   {path:'employee',component:EmployeeComponent,data: { title: 'Employees   List' }},
   {path:'home',component:HomeComponent},
@@ -25,7 +26,7 @@ const appRoutes : Routes=[
 @NgModule({
   declarations: [
     AppComponent,EmployeeComponent,EmployeeTitle,SimpleComponent,HomeComponent,PageNotFoundComponent,RegistrationComponent,
-    ReportComponent,AuthorComponent
+    ReportComponent,AuthorComponent,AuthormComponent
   ],
   imports: [
     BrowserModule,
