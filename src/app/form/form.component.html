@@ -1,0 +1,28 @@
+<form #regForm ="ngForm" (ngSubmit)="saveData(regForm)">
+   
+          <h3> Registration</h3>
+        
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" ngModel  #fn="ngModel"   name="firstName" id="firstName" class="form-control" required/>
+            <div *ngIf="fn.touched">
+            <div [hidden]="fn.valid" class="text-danger">First Name is Required</div></div>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>  
+            <input ngModel #ln="ngModel"  type="text"  name="lastName" id="lastName" class="form-control" required/>        
+            <div *ngIf="ln.touched">
+            <div [hidden]="ln.valid" class="text-danger">Last Name is Required</div></div>
+        </div>
+        <div class="form-group">
+            <label for="dept">Departments</label>
+            <select id="dept" ngModel #depts="ngModel" name="depts" required>
+                <div *ngIf="depts.touched">
+                    <div [hidden]="depts.valid" class="text-danger">Select a value</div></div>
+                <option *ngFor="let d of department" [value]="d">{{d}}</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+ 
+</form>
+{{regForm.value | json}}

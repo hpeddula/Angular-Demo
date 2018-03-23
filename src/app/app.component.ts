@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
   selector: 'app-root',
   template: `
 
-  <author></author>
+  <app-form></app-form>
 `,
   // styleUrls: ['./app.component.css']
 })

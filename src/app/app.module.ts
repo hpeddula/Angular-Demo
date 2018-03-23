@@ -17,21 +17,22 @@ import { RegistrationComponent } from './registration/registration.component';
 import { ReportComponent } from './registration/report.component';
 import { AuthorComponent } from './author/author.component';
 import { AuthormComponent } from './author/authorm.component';
-const appRoutes : Routes=[
-  {path:'employee',component:EmployeeComponent,data: { title: 'Employees   List' }},
-  {path:'home',component:HomeComponent},
-  { path: '',component:AuthorComponent ,pathMatch: 'full'},
-  {path:'**',component:PageNotFoundComponent}
-];
+import {  FormComponent } from './form/form.component';
+// const appRoutes : Routes=[
+//   {path:'employee',component:EmployeeComponent,data: { title: 'Employees   List' }},
+//   {path:'home',component:HomeComponent},
+//   { path: '',component:FormComponent ,pathMatch: 'full'},
+//   {path:'**',component:PageNotFoundComponent}
+// ];
 @NgModule({
   declarations: [
     AppComponent,EmployeeComponent,EmployeeTitle,SimpleComponent,HomeComponent,PageNotFoundComponent,RegistrationComponent,
-    ReportComponent,AuthorComponent,AuthormComponent
+    ReportComponent,AuthorComponent,AuthormComponent,FormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-   RouterModule.forRoot(appRoutes,{ enableTracing: true } ),
+  //  RouterModule.forRoot(appRoutes,{ enableTracing: true } ),
     HttpClientModule, 
     ApolloModule,
     HttpLinkModule
