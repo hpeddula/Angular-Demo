@@ -11,5 +11,6 @@
         <authorm [postId]="post.id"
         [votes]="post.votes"></authorm>
         <button class="btn btn-outline-dark" >{{post.votes}}</button>
-    </div>
-</div>
+        <input type="text" (keyup)="click($event)"/>{{values}}
+    </div> 
+</div> 

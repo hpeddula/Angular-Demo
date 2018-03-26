@@ -7,11 +7,15 @@ import { NgForm } from '@angular/forms';
 })
 
 export class FormComponent{
+    values:string;
     department:any=['EA','ET','OPS']
     depts: string;
     firstName: string;
     LastName: string;
     saveData(formData:NgForm){
         console.log(formData);
+    }
+    click(event:any){
+        this.values=event.target.value;
     }
 }

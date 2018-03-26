@@ -3,8 +3,9 @@ import { Observable } from 'rxjs/Observable';
 @Component({
   selector: 'app-root',
   template: `
+  
 
-  <app-form></app-form>
+  <app-auto></app-auto>
 `,
   // styleUrls: ['./app.component.css']
 })

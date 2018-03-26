@@ -11,6 +11,10 @@ import { Post, Query } from './types';
 
 export class AuthorComponent implements OnInit{
     posts :Post[];
+    values:string;
+    click(event:any){
+        this.values += event.target.value+'|';
+    }
     constructor(private apollo:Apollo){}
     ngOnInit(){
     var res=this.apollo.watchQuery<Query>({
@@ -31,4 +35,5 @@ export class AuthorComponent implements OnInit{
 
     }).valueChanges.subscribe(({data})=>this.posts=data.posts)
 }
+
 }

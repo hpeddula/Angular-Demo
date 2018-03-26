@@ -6,6 +6,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApolloModule,Apollo } from 'apollo-angular';
 import { HttpLinkModule,HttpLink } from 'apollo-angular-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule,MatProgressSpinnerModule,MatAutocompleteModule,MatFormFieldModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { EmployeeComponent } from './employee/employee.component';
@@ -18,27 +21,36 @@ import { ReportComponent } from './registration/report.component';
 import { AuthorComponent } from './author/author.component';
 import { AuthormComponent } from './author/authorm.component';
 import {  FormComponent } from './form/form.component';
-// const appRoutes : Routes=[
-//   {path:'employee',component:EmployeeComponent,data: { title: 'Employees   List' }},
-//   {path:'home',component:HomeComponent},
-//   { path: '',component:FormComponent ,pathMatch: 'full'},
-//   {path:'**',component:PageNotFoundComponent}
-// ];
+import { MatAutoComponent } from './form/matauto.component';
+const appRoutes : Routes=[
+  {path:'employee',component:EmployeeComponent,data: { title: 'Employees   List' }},
+  {path:'home',component:HomeComponent},
+  { path: '',component:FormComponent ,pathMatch: 'full'},
+  {path:'**',component:PageNotFoundComponent}
+];
 @NgModule({
   declarations: [
     AppComponent,EmployeeComponent,EmployeeTitle,SimpleComponent,HomeComponent,PageNotFoundComponent,RegistrationComponent,
-    ReportComponent,AuthorComponent,AuthormComponent,FormComponent
+    ReportComponent,AuthorComponent,AuthormComponent,FormComponent,MatAutoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-  //  RouterModule.forRoot(appRoutes,{ enableTracing: true } ),
+    RouterModule.forRoot(appRoutes,{ enableTracing: true } ),
     HttpClientModule, 
     ApolloModule,
-    HttpLinkModule
+    HttpLinkModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatProgressSpinnerModule,
+    MatAutocompleteModule,
+    MatFormFieldModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { 
   constructor(
