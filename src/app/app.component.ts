@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
   template: `
   
 
-  <app-auto></app-auto>
+ <app-select></app-select>
 `,
   // styleUrls: ['./app.component.css']
 })

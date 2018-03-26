@@ -9,6 +9,8 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule,MatProgressSpinnerModule,MatAutocompleteModule,MatFormFieldModule} from '@angular/material';
+import { NgSelectModule } from '@ng-select/ng-select';
+
 
 import { AppComponent } from './app.component';
 import { EmployeeComponent } from './employee/employee.component';
@@ -22,6 +24,7 @@ import { AuthorComponent } from './author/author.component';
 import { AuthormComponent } from './author/authorm.component';
 import {  FormComponent } from './form/form.component';
 import { MatAutoComponent } from './form/matauto.component';
+import { SelectComponent } from './select/select.component';
 const appRoutes : Routes=[
   {path:'employee',component:EmployeeComponent,data: { title: 'Employees   List' }},
   {path:'home',component:HomeComponent},
@@ -31,7 +34,7 @@ const appRoutes : Routes=[
 @NgModule({
   declarations: [
     AppComponent,EmployeeComponent,EmployeeTitle,SimpleComponent,HomeComponent,PageNotFoundComponent,RegistrationComponent,
-    ReportComponent,AuthorComponent,AuthormComponent,FormComponent,MatAutoComponent
+    ReportComponent,AuthorComponent,AuthormComponent,FormComponent,MatAutoComponent,SelectComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ const appRoutes : Routes=[
     MatCheckboxModule,
     MatProgressSpinnerModule,
     MatAutocompleteModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],
